@@ -84,8 +84,6 @@ runtime ./plugs.vim
 runtime ./maps.vim
 "}}}
 
-let mapleader = " "
-
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -109,7 +107,7 @@ if exists("&termguicolors") && exists("&winblend")
   " Use NeoSolarized
   "let g:neosolarized_termtrans=1
   "runtime ./colors/NeoSolarized.vim
-  colorscheme equinusocio_material
+  colorscheme rose-pine
   let g:material_theme_style = 'ocean'
   "hi Normal guibg=NONE ctermbg=NONE
 endif
