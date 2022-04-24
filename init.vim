@@ -80,7 +80,7 @@ highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
 " ---------------------------------------------------------------------
 
 runtime ./plugs.vim
-
+runtime ./coc.vim
 runtime ./maps.vim
 "}}}
 
@@ -89,7 +89,6 @@ let mapleader = " "
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -109,46 +108,23 @@ if exists("&termguicolors") && exists("&winblend")
   " Use NeoSolarized
   "let g:neosolarized_termtrans=1
   "runtime ./colors/NeoSolarized.vim
-  colorscheme equinusocio_material
+  colorscheme gruvbox
   let g:material_theme_style = 'ocean'
-  "hi Normal guibg=NONE ctermbg=NONE
+  hi Normal guibg=NONE ctermbg=NONE
 endif
 "}}}
 
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-
-" --- Just Some Notes ---
-" :PlugClean :PlugInstall :UpdateRemotePlugins
-"
-" :CocInstall coc-python
-" :CocInstall coc-clangd
-" :CocInstall coc-snippets
-" :CocCommand snippets.edit... FOR EACH FILE TYPE
-
-" air-line
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+let g:NERDTreeDirArrowExpandable=""
+let g:NERDTreeDirArrowCollapsible=""
 
 " Treesitter
 lua require'nvim-treesitter.configs'.setup { highlight = {enable = true} }
 
-" Git sign
-lua require('gitsigns').setup()
 
 " Auto pairs
 lua require('nvim-autopairs').setup{}
+
+" Python provider
+let g:python39_host_prog = 'C:\Users\57312\AppData\Local\Programs\Python\Python39\python.exe'
+let g:loaded_python39_provider = 'C:\Users\57312\AppData\Local\Programs\Python\Python39'
+
