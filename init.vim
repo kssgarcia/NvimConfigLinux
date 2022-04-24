@@ -128,3 +128,5 @@ lua require('nvim-autopairs').setup{}
 let g:python39_host_prog = 'C:\Users\57312\AppData\Local\Programs\Python\Python39\python.exe'
 let g:loaded_python39_provider = 'C:\Users\57312\AppData\Local\Programs\Python\Python39'
 
+" Python indentation
+let g:python_pep8_indent_multiline_string=1
