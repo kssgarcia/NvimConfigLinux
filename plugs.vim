@@ -26,6 +26,7 @@ Plug 'https://github.com/windwp/nvim-autopairs'
 Plug 'https://github.com/dart-lang/dart-vim-plugin'
 Plug 'https://github.com/tweekmonster/django-plus.vim'
 Plug 'https://github.com/psliwka/vim-smoothie'
+Plug 'https://github.com/jistr/vim-nerdtree-tabs'
 
 " Lua setup
 if has("nvim")
